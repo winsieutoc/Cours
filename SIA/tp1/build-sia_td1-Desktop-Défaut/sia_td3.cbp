@@ -1,0 +1,1439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="sia_td3"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\ext\;CMake Files\ext\nanogui\;CMake Files\ext\nanogui\ext\;CMake Files\ext\nanogui\ext\glfw\;CMake Files\ext\nanogui\ext\glfw\CMake\;CMake Files\ext\nanogui\ext\glfw\CMake\modules\;CMake Files\ext\nanogui\ext\glfw\src\;CMake Files\ext\lib3ds\;CMake Files\ext\lib3ds\src\;CMake Files\ext\lodepng\;CMake Files\ext\tinyobjloader\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sia_raytracer">
+				<Option output="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/sia_raytracer" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DDATA_DIR=&quot;/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1&quot;"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/include"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/tinyformat"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/eigen"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/tinyexr"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lodepng"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/pugixml/src"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/hypothesis"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/include"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glew/include"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/nanovg/src"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/filesystem"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/tinyobjloader"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lib3ds/src"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 sia_raytracer"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sia_raytracer/fast">
+				<Option output="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/sia_raytracer" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DDATA_DIR=&quot;/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1&quot;"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/include"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/tinyformat"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/eigen"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/tinyexr"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lodepng"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/pugixml/src"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/hypothesis"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/include"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glew/include"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/nanovg/src"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/filesystem"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/tinyobjloader"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lib3ds/src"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 sia_raytracer/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="warptest">
+				<Option output="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/warptest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DDATA_DIR=&quot;/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1&quot;"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/include"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/tinyformat"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/eigen"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/tinyexr"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lodepng"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/pugixml/src"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/hypothesis"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/include"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glew/include"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/nanovg/src"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/filesystem"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/tinyobjloader"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lib3ds/src"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 warptest"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="warptest/fast">
+				<Option output="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/warptest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DDATA_DIR=&quot;/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1&quot;"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/include"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/tinyformat"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/eigen"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/tinyexr"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lodepng"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/pugixml/src"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/hypothesis"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/include"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glew/include"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/nanovg/src"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/filesystem"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/tinyobjloader"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lib3ds/src"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 warptest/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pugixml">
+				<Option output="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/libpugixml.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/Makefile&quot;  VERBOSE=1 pugixml"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pugixml/fast">
+				<Option output="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/libpugixml.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/Makefile&quot;  VERBOSE=1 pugixml/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="nanogui">
+				<Option output="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/libnanogui.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCORO_SJLJ"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/eigen"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/include"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/nanovg/src"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include"/>
+					<Add directory="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/coro"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/Makefile&quot;  VERBOSE=1 nanogui"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="nanogui/fast">
+				<Option output="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/libnanogui.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCORO_SJLJ"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/eigen"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/include"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/nanovg/src"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include"/>
+					<Add directory="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/coro"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/Makefile&quot;  VERBOSE=1 nanogui/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="nanogui-obj">
+				<Option output="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/CMakeFiles/nanogui-obj.dir/nanogui-obj.objlib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DNANOGUI_BUILD"/>
+					<Add option="-DNVG_BUILD"/>
+					<Add option="-DCORO_SJLJ"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/eigen"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/include"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/nanovg/src"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include"/>
+					<Add directory="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/coro"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/Makefile&quot;  VERBOSE=1 nanogui-obj"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="nanogui-obj/fast">
+				<Option output="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/CMakeFiles/nanogui-obj.dir/nanogui-obj.objlib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DNANOGUI_BUILD"/>
+					<Add option="-DNVG_BUILD"/>
+					<Add option="-DCORO_SJLJ"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/eigen"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/include"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/nanovg/src"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include"/>
+					<Add directory="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/coro"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/Makefile&quot;  VERBOSE=1 nanogui-obj/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glfw_objects">
+				<Option output="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/glfw_objects.objlib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_GLFW_USE_CONFIG_H"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/include"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src"/>
+					<Add directory="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/Makefile&quot;  VERBOSE=1 glfw_objects"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glfw_objects/fast">
+				<Option output="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/glfw_objects.objlib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_GLFW_USE_CONFIG_H"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/include"/>
+					<Add directory="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src"/>
+					<Add directory="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/Makefile&quot;  VERBOSE=1 glfw_objects/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glfw">
+				<Option output="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/libglfw3.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/Makefile&quot;  VERBOSE=1 glfw"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glfw/fast">
+				<Option output="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/libglfw3.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/Makefile&quot;  VERBOSE=1 glfw/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lib3ds">
+				<Option output="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/lib3ds/src/liblib3ds.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/lib3ds/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/lib3ds/src/Makefile&quot;  VERBOSE=1 lib3ds"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/lib3ds/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/lib3ds/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/lib3ds/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lib3ds/fast">
+				<Option output="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/lib3ds/src/liblib3ds.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/lib3ds/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/lib3ds/src/Makefile&quot;  VERBOSE=1 lib3ds/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/lib3ds/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/lib3ds/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/lib3ds/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tinyobjloader">
+				<Option output="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/tinyobjloader/libtinyobjloader.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/tinyobjloader"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/tinyobjloader/Makefile&quot;  VERBOSE=1 tinyobjloader"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/tinyobjloader/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/tinyobjloader/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/tinyobjloader/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tinyobjloader/fast">
+				<Option output="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/tinyobjloader/libtinyobjloader.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/tinyobjloader"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/tinyobjloader/Makefile&quot;  VERBOSE=1 tinyobjloader/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/tinyobjloader/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/tinyobjloader/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/tinyobjloader/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lodepng">
+				<Option output="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/lodepng/liblodepng.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/lodepng"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/lodepng/Makefile&quot;  VERBOSE=1 lodepng"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/lodepng/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/lodepng/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/lodepng/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lodepng/fast">
+				<Option output="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/lodepng/liblodepng.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/lodepng"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/lodepng/Makefile&quot;  VERBOSE=1 lodepng/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/lodepng/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/lodepng/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/lodepng/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/CMakeFiles/nanogui-obj.dir/ext/nanovg/src/nanovg.c.o">
+			<Option target="nanogui"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/CMakeFiles/nanogui-obj.dir/nanogui_resources.cpp.o">
+			<Option target="nanogui"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/CMakeFiles/nanogui-obj.dir/src/button.cpp.o">
+			<Option target="nanogui"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/CMakeFiles/nanogui-obj.dir/src/checkbox.cpp.o">
+			<Option target="nanogui"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/CMakeFiles/nanogui-obj.dir/src/colorpicker.cpp.o">
+			<Option target="nanogui"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/CMakeFiles/nanogui-obj.dir/src/colorwheel.cpp.o">
+			<Option target="nanogui"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/CMakeFiles/nanogui-obj.dir/src/combobox.cpp.o">
+			<Option target="nanogui"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/CMakeFiles/nanogui-obj.dir/src/common.cpp.o">
+			<Option target="nanogui"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/CMakeFiles/nanogui-obj.dir/src/glcanvas.cpp.o">
+			<Option target="nanogui"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/CMakeFiles/nanogui-obj.dir/src/glutil.cpp.o">
+			<Option target="nanogui"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/CMakeFiles/nanogui-obj.dir/src/graph.cpp.o">
+			<Option target="nanogui"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/CMakeFiles/nanogui-obj.dir/src/imagepanel.cpp.o">
+			<Option target="nanogui"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/CMakeFiles/nanogui-obj.dir/src/imageview.cpp.o">
+			<Option target="nanogui"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/CMakeFiles/nanogui-obj.dir/src/label.cpp.o">
+			<Option target="nanogui"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/CMakeFiles/nanogui-obj.dir/src/layout.cpp.o">
+			<Option target="nanogui"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/CMakeFiles/nanogui-obj.dir/src/messagedialog.cpp.o">
+			<Option target="nanogui"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/CMakeFiles/nanogui-obj.dir/src/popup.cpp.o">
+			<Option target="nanogui"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/CMakeFiles/nanogui-obj.dir/src/popupbutton.cpp.o">
+			<Option target="nanogui"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/CMakeFiles/nanogui-obj.dir/src/progressbar.cpp.o">
+			<Option target="nanogui"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/CMakeFiles/nanogui-obj.dir/src/screen.cpp.o">
+			<Option target="nanogui"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/CMakeFiles/nanogui-obj.dir/src/serializer.cpp.o">
+			<Option target="nanogui"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/CMakeFiles/nanogui-obj.dir/src/slider.cpp.o">
+			<Option target="nanogui"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/CMakeFiles/nanogui-obj.dir/src/stackedwidget.cpp.o">
+			<Option target="nanogui"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/CMakeFiles/nanogui-obj.dir/src/tabheader.cpp.o">
+			<Option target="nanogui"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/CMakeFiles/nanogui-obj.dir/src/tabwidget.cpp.o">
+			<Option target="nanogui"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/CMakeFiles/nanogui-obj.dir/src/textbox.cpp.o">
+			<Option target="nanogui"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/CMakeFiles/nanogui-obj.dir/src/theme.cpp.o">
+			<Option target="nanogui"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/CMakeFiles/nanogui-obj.dir/src/vscrollpanel.cpp.o">
+			<Option target="nanogui"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/CMakeFiles/nanogui-obj.dir/src/widget.cpp.o">
+			<Option target="nanogui"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/CMakeFiles/nanogui-obj.dir/src/window.cpp.o">
+			<Option target="nanogui"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/context.c.o">
+			<Option target="nanogui"/>
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/egl_context.c.o">
+			<Option target="nanogui"/>
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/glx_context.c.o">
+			<Option target="nanogui"/>
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/init.c.o">
+			<Option target="nanogui"/>
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/input.c.o">
+			<Option target="nanogui"/>
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/linux_joystick.c.o">
+			<Option target="nanogui"/>
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/monitor.c.o">
+			<Option target="nanogui"/>
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/posix_time.c.o">
+			<Option target="nanogui"/>
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/posix_tls.c.o">
+			<Option target="nanogui"/>
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/vulkan.c.o">
+			<Option target="nanogui"/>
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/window.c.o">
+			<Option target="nanogui"/>
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/x11_init.c.o">
+			<Option target="nanogui"/>
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/x11_monitor.c.o">
+			<Option target="nanogui"/>
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/x11_window.c.o">
+			<Option target="nanogui"/>
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/xkb_unicode.c.o">
+			<Option target="nanogui"/>
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/ext_build/glfw/src/glfw_config.h">
+			<Option target="glfw_objects"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/nanogui_resources.cpp">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/nanogui_resources.cpp.rule">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/autofs/netapp/travail/awolski/M2_S9/SyntImage/tp1/build-sia_td1-Desktop-Défaut/ext_build/nanogui/nanogui_resources.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lib3ds/src/lib3ds.h">
+			<Option target="lib3ds"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lib3ds/src/lib3ds.rc">
+			<Option target="lib3ds"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lib3ds/src/lib3ds_atmosphere.c">
+			<Option target="lib3ds"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lib3ds/src/lib3ds_background.c">
+			<Option target="lib3ds"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lib3ds/src/lib3ds_camera.c">
+			<Option target="lib3ds"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lib3ds/src/lib3ds_chunk.c">
+			<Option target="lib3ds"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lib3ds/src/lib3ds_chunktable.c">
+			<Option target="lib3ds"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lib3ds/src/lib3ds_file.c">
+			<Option target="lib3ds"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lib3ds/src/lib3ds_impl.h">
+			<Option target="lib3ds"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lib3ds/src/lib3ds_io.c">
+			<Option target="lib3ds"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lib3ds/src/lib3ds_light.c">
+			<Option target="lib3ds"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lib3ds/src/lib3ds_material.c">
+			<Option target="lib3ds"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lib3ds/src/lib3ds_math.c">
+			<Option target="lib3ds"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lib3ds/src/lib3ds_matrix.c">
+			<Option target="lib3ds"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lib3ds/src/lib3ds_mesh.c">
+			<Option target="lib3ds"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lib3ds/src/lib3ds_node.c">
+			<Option target="lib3ds"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lib3ds/src/lib3ds_quat.c">
+			<Option target="lib3ds"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lib3ds/src/lib3ds_shadow.c">
+			<Option target="lib3ds"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lib3ds/src/lib3ds_track.c">
+			<Option target="lib3ds"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lib3ds/src/lib3ds_util.c">
+			<Option target="lib3ds"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lib3ds/src/lib3ds_vector.c">
+			<Option target="lib3ds"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lib3ds/src/lib3ds_viewport.c">
+			<Option target="lib3ds"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lodepng/lodepng.cpp">
+			<Option target="lodepng"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lodepng/lodepng.h">
+			<Option target="lodepng"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/include/GLFW/glfw3.h">
+			<Option target="glfw_objects"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/include/GLFW/glfw3native.h">
+			<Option target="glfw_objects"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/context.c">
+			<Option target="glfw_objects"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/egl_context.c">
+			<Option target="glfw_objects"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/egl_context.h">
+			<Option target="glfw_objects"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/glx_context.c">
+			<Option target="glfw_objects"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/glx_context.h">
+			<Option target="glfw_objects"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/init.c">
+			<Option target="glfw_objects"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/input.c">
+			<Option target="glfw_objects"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/internal.h">
+			<Option target="glfw_objects"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/linux_joystick.c">
+			<Option target="glfw_objects"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/linux_joystick.h">
+			<Option target="glfw_objects"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/monitor.c">
+			<Option target="glfw_objects"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/posix_time.c">
+			<Option target="glfw_objects"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/posix_time.h">
+			<Option target="glfw_objects"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/posix_tls.c">
+			<Option target="glfw_objects"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/posix_tls.h">
+			<Option target="glfw_objects"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/vulkan.c">
+			<Option target="glfw_objects"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/window.c">
+			<Option target="glfw_objects"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/x11_init.c">
+			<Option target="glfw_objects"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/x11_monitor.c">
+			<Option target="glfw_objects"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/x11_platform.h">
+			<Option target="glfw_objects"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/x11_window.c">
+			<Option target="glfw_objects"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/xkb_unicode.c">
+			<Option target="glfw_objects"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/xkb_unicode.h">
+			<Option target="glfw_objects"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/nanovg/src/nanovg.c">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/nanovg/src/nanovg.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include/nanogui/button.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include/nanogui/checkbox.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include/nanogui/colorpicker.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include/nanogui/colorwheel.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include/nanogui/combobox.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include/nanogui/common.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include/nanogui/formhelper.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include/nanogui/glcanvas.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include/nanogui/glutil.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include/nanogui/graph.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include/nanogui/imagepanel.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include/nanogui/imageview.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include/nanogui/label.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include/nanogui/layout.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include/nanogui/messagedialog.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include/nanogui/nanogui.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include/nanogui/opengl.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include/nanogui/popup.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include/nanogui/popupbutton.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include/nanogui/progressbar.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include/nanogui/screen.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include/nanogui/serializer/core.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include/nanogui/serializer/opengl.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include/nanogui/serializer/sparse.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include/nanogui/slider.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include/nanogui/stackedwidget.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include/nanogui/tabheader.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include/nanogui/tabwidget.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include/nanogui/textbox.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include/nanogui/theme.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include/nanogui/toolbutton.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include/nanogui/vscrollpanel.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include/nanogui/widget.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/include/nanogui/window.h">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/src/button.cpp">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/src/checkbox.cpp">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/src/colorpicker.cpp">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/src/colorwheel.cpp">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/src/combobox.cpp">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/src/common.cpp">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/src/glcanvas.cpp">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/src/glutil.cpp">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/src/graph.cpp">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/src/imagepanel.cpp">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/src/imageview.cpp">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/src/label.cpp">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/src/layout.cpp">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/src/messagedialog.cpp">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/src/popup.cpp">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/src/popupbutton.cpp">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/src/progressbar.cpp">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/src/screen.cpp">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/src/serializer.cpp">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/src/slider.cpp">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/src/stackedwidget.cpp">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/src/tabheader.cpp">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/src/tabwidget.cpp">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/src/textbox.cpp">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/src/theme.cpp">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/src/vscrollpanel.cpp">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/src/widget.cpp">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/src/window.cpp">
+			<Option target="nanogui-obj"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/pugixml/src/pugixml.cpp">
+			<Option target="pugixml"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/pugixml/src/pugixml.hpp">
+			<Option target="pugixml"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/tinyobjloader/tiny_obj_loader.cc">
+			<Option target="tinyobjloader"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/tinyobjloader/tiny_obj_loader.h">
+			<Option target="tinyobjloader"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/include/areaLight.h">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/include/bitmap.h">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/include/block.h">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/include/bvh.h">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/include/camera.h">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/include/color.h">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/include/common.h">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/include/glPrimitives.h">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/include/integrator.h">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/include/light.h">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/include/lightProbe.h">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/include/material.h">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/include/mesh.h">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/include/object.h">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/include/parser.h">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/include/plane.h">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/include/proplist.h">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/include/quad.h">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/include/ray.h">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/include/scene.h">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/include/shape.h">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/include/sphere.h">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/include/trackball.h">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/include/transform.h">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/include/vector.h">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/include/viewer.h">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/include/warp.h">
+			<Option target="sia_raytracer"/>
+			<Option target="warptest"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/src/ao.cpp">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/src/areaLight.cpp">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/src/bitmap.cpp">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/src/block.cpp">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/src/bvh.cpp">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/src/camera.cpp">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/src/common.cpp">
+			<Option target="sia_raytracer"/>
+			<Option target="warptest"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/src/direct.cpp">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/src/directionalLight.cpp">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/src/flat.cpp">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/src/lightProbe.cpp">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/src/main.cpp">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/src/material.cpp">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/src/mesh.cpp">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/src/normals.cpp">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/src/object.cpp">
+			<Option target="sia_raytracer"/>
+			<Option target="warptest"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/src/parser.cpp">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/src/phong.cpp">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/src/plane.cpp">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/src/pointLight.cpp">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/src/proplist.cpp">
+			<Option target="sia_raytracer"/>
+			<Option target="warptest"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/src/quad.cpp">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/src/scene.cpp">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/src/shape.cpp">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/src/sphere.cpp">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/src/texcoords.cpp">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/src/trackball.cpp">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/src/viewer.cpp">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/src/ward.cpp">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/src/warp.cpp">
+			<Option target="sia_raytracer"/>
+			<Option target="warptest"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/src/warptest.cpp">
+			<Option target="warptest"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/src/whitted.cpp">
+			<Option target="sia_raytracer"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\ext\"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\ext\nanogui\"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\ext\nanogui\"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/CMake/modules/FindVulkan.cmake">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\CMake\modules\"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/CMake/modules/FindVulkan.cmake">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\CMake\modules\"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/CMake/modules/FindVulkan.cmake">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\CMake\modules\"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/glfw3Config.cmake.in">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\src\"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/glfw_config.h.in">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\src\"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/glfw3.pc.in">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\src\"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\src\"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/glfw3Config.cmake.in">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\src\"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/glfw_config.h.in">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\src\"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/glfw3.pc.in">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\src\"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\src\"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/glfw3Config.cmake.in">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\src\"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/glfw_config.h.in">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\src\"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/glfw3.pc.in">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\src\"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/nanogui/ext/glfw/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\ext\nanogui\ext\glfw\src\"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lib3ds/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\ext\lib3ds\"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lib3ds/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\ext\lib3ds\"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lib3ds/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\ext\lib3ds\src\"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lib3ds/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\ext\lib3ds\src\"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lodepng/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\ext\lodepng\"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/lodepng/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\ext\lodepng\"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/tinyobjloader/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\ext\tinyobjloader\"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/tinyobjloader/tinyobjloader-config.cmake.in">
+			<Option virtualFolder="CMake Files\ext\tinyobjloader\"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/tinyobjloader/tinyobjloader.pc.in">
+			<Option virtualFolder="CMake Files\ext\tinyobjloader\"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/tinyobjloader/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\ext\tinyobjloader\"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/tinyobjloader/tinyobjloader-config.cmake.in">
+			<Option virtualFolder="CMake Files\ext\tinyobjloader\"/>
+		</Unit>
+		<Unit filename="/net/cremi/awolski/espaces/travail/M2_S9/SyntImage/tp1/sia_td1/ext/tinyobjloader/tinyobjloader.pc.in">
+			<Option virtualFolder="CMake Files\ext\tinyobjloader\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
