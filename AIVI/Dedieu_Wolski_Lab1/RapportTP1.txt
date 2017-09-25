@@ -1,0 +1,31 @@
+	Study of information content of video sequences - Introduction to OpenCV
+
+TP réalisé en binome: Thomas DEDIEU & Axel WOLSKI
+
+Pour exécuter le programme il faut ce placer dans le dossier "Build" et faire la commande "cmake .. && make && ./Lab1 video-filename distance-between-two-frames-for-prediction".
+
+Dans le dossier "Graph" se trouve les graphiques de chacune des vidéos avec un "distance-between-two-frames-for-prediction" = 5.
+Pour obtenir les graphiques de l'entropy il faut utiliser "entropyGraph.gnuplot".
+Les *out.png correspondent aux graphiques MSE et PSNR et les *outEntropy.png aux graphiques avec l'entropy de l'image d'origine (ENT) et l'image correpondant à l'erreur (ENTERR).
+Les images généraient par notre code correspondent aux images obtenue avec la matrice d'erreur calculer avec computeErrorImage() sont stockées dans le dossier "Data".
+
+Vidéo Birds: (Bird_out.png & Bird_outEntropy.png)
+La MSE a des valeurs hautes (900-1300) car la caméra est mobile, contrairement aux plans fixe des trois autres vidéos. Il n'y a pas de forte variation dans la courbe car seul un oiseau s'envole.
+
+
+Vidéo Boat: (Boat_out.png & Boat_outEntropy.png)
+La MSE varie fortement lorsque des voitures passent dans le champ de la caméra. Au début les valeurs sont hautes (environ 500) car la camera suit le bateau. Par la suite les valeurs reste près des 200.
+
+
+Vidéo Small Car: (Cars_out.png & Cars_outEntropy.png)
+La MSE varie fortement a chaque fois qu'un objet animé apparait à l'écran (50-250) mais les valeurs reste faible par rapport aux precedentes vidéo car le plan est fixe et les 2/3 de la partie haute de la vidéo ne varie très peu.
+
+Vidéo Person : (Person_out.png & Berson_outEntropy.png)
+Comme précédement on constate qu'il a des piques sur la courbe lié aux passages des voitures et à l'éloignement de la personne. Le plan reste fixe et seulement sur la moitier base de la vidéo nous pouvont constater des changement, c'est pourquoi les valeurs ne dépasse pas 500.
+
+PSNR: 
+On peut constater que pour toutes les vidéos la courbe PSNR est toujours comprise entre 20 et 40, la courbe reste globalement constante et a de faible variation lié aux piques de la courbe MSE.
+
+Entropy/Entropy Error:
+On constate que la courbe de l'entropy de l'image d'origine et relativement constante.
+Alors que la courbe de l'entropy d'erreur varie car dans l'image il y a présence des informations de l'image courante et celle d'un décalage lié au "distance-between-two-frames-for-prediction" que l'on a choisi. Lorsqu'il y a beaucoup de mouvement sur la vidéo alors la courbe de l'entropy d'erreur varie beaucoup car il y a donc 2 fois plus de mouvements. Cela provient de la quantité d'informations présentent sur la vidéo.
