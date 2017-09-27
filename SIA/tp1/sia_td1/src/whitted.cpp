@@ -41,16 +41,19 @@ public:
                    float dist;
                    lightDir = light->position() - pos;
 
-                   float x = Eigen::internal::random<float>(-0.5,0.5);
-                   float y = Eigen::internal::random<float>(-0.5,0.5);
+                   float x = Eigen::internal::random<float>(0,1);
+                   float y = Eigen::internal::random<float>(0,1);
 
                    Vector3f u = light->uVec();
                    Vector3f v = light->vVec();
                    Vector2f s = light->size();
 
 
-                   lightDir += s.x()*u*x;
-                   lightDir += s.y()*v*y;
+                   Vector3f uV = s.x() * u * x;
+                   Vector3f vV = s.y() * v * y;
+
+                   lightDir += uV;
+                   lightDir += vV;
 
                    dist = lightDir.norm();
                    lightDir.normalize();
@@ -71,7 +74,7 @@ public:
 
                    float cos_term = std::max(0.f,lightDir.dot(normal));
                    Color3f brdf = material->brdf(-ray.direction, lightDir, normal, hit.texcoord());
-                   radiance += (*it)->intensity(pos) * cos_term * brdf * attenuation;
+                   radiance += light->intensity(pos, (light->position() + uV + vV)) * cos_term * brdf * attenuation;
                 }
                 else
                 {

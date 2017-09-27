@@ -1,2 +1,0 @@
-# Hashes of file build rules.
-a7efb68c533a5236c360e1fcb8e89eb1 ext_build/nanogui/nanogui_resources.cpp

@@ -282,38 +282,16 @@ void renderBlock(Scene* scene, ImageBlock& block)
     Vector2i offset = block.getOffset();
     Vector2i size  = block.getSize();
 
-    Color3f moyenne;
-
     /* For each pixel and pixel sample */
     for (int y=0; y<size.y(); ++y) {
         for (int x=0; x<size.x(); ++x) {
             // compute the primary ray parameters
-            float xp, yp;
-            double jitterX, jitterY;
-            for(int w=0;w<camera->sampleCount();w++){
-                xp = (x*1.0)+(w*1.0/camera->sampleCount());
-                jitterX = Eigen::internal::random<float>(0,2) - 1;
-                for(int h=0;h<camera->sampleCount();h++){
-                    yp = (y*1.0)+(h*1.0/camera->sampleCount());
-                    jitterY = Eigen::internal::random<float>(0,2) - 1;
+            Ray ray;
+            ray.origin = camera->position();
+            ray.direction = (camF + camX * (2.0*float(x + 0.5f + offset[0])/float(camera->vpWidth())  - 1.)
+                                  - camY * (2.0*float(y + 0.5f + offset[1])/float(camera->vpHeight()) - 1.)).normalized();
 
-                    Ray ray;
-                    ray.origin = camera->position();
-                    if(camera->isStratified()){
-                        ray.direction = (camF + camX * (2.0*float(xp + offset[0]+jitterX)/float(camera->vpWidth())  - 1.)
-                                        - camY * (2.0*float(yp + offset[1]+jitterY)/float(camera->vpHeight()) - 1.)).normalized();
-                    }
-                    else {
-                        ray.direction = (camF + camX * (2.0*float(xp + offset[0])/float(camera->vpWidth())  - 1.)
-                                            - camY * (2.0*float(yp + offset[1])/float(camera->vpHeight()) - 1.)).normalized();
-                    }
-
-                    moyenne += integrator->Li(scene,ray);
-                    //block.put(Vector2f(x+offset[0], y+offset[1]), integrator->Li(scene,ray));
-                }
-            }
-            moyenne /= camera->sampleCount()*camera->sampleCount();
-            block.put(Vector2f(x+offset[0], y+offset[1]), moyenne);
+            block.put(Vector2f(x+offset[0], y+offset[1]), integrator->Li(scene,ray));
         }
     }
 }

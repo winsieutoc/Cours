@@ -9,7 +9,7 @@
    <float name="fieldOfView" value="45.0" /> 
    <integer name="width" value="512"/>
    <integer name="height" value="512"/>
-   <integer name="samples" value="8"/>
+   <integer name="samples" value="16"/>
    <boolean name="stratified" value="true"/>
    <transform name="toWorld">
      <lookat origin="2, -1.5, 1.5" target="-1, 0, -0.25" up="0, 0, 1"/>
@@ -63,7 +63,6 @@
   </shape>
 
  <light type="areaLight">
-	<string name="texture" value="light_source.exr" />
     <color name="intensity" value="50, 50, 50" />
     <shape type="quad">
       <vector name="size" value="1,1,0" />
