@@ -3,7 +3,7 @@ var displayParameters = {
   // parameters for stereo rendering
   // physical screen diagonal -- in mm
   screenDiagonal: 337.82,
-  screenResolutionWidth: 1440,
+  screenResolutionWidth: 1080,
   aspectRatio: 1.6,
 
   // inter pupillar distance -- in mm
@@ -21,5 +21,5 @@ var displayParameters = {
   screenSize: function() {
     return new THREE.Vector2(300,200);
   }
-  
+
 };
