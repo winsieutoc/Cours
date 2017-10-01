@@ -30,11 +30,8 @@ imagesc(T)
 M = T;
 M(M > 0) = 1;
 
-figure
-imagesc(M)
-
 se = strel('square', nbP);
-min = -1;
+minSSD = 9000;
 
 while M(M==0)==0
     L = M - imdilate(M,se);
@@ -44,13 +41,30 @@ while M(M==0)==0
             if L(x,y,:) == -1
                 for i=1:sizeS(1)
                     for j=1:sizeS(2)
-                        if (i==0 || j==0)
-                            patch1 = myPatch(S,nbP,i,j);
-                            patch2 = myPatch(T,nbP,x,y);
-                            ssd = SSD(patch1, patch2);
+                        coordImin = i
+                        coordJmin = j
+                        if(i==0 | j==0)
+                            patch1 = myPatch(S,nbP,i+1,j+1);
+                        end
+                        if(i==32 | j==32)
+                            patch1 = myPatch(S,nbP,i-1,j-1);
+                        end
+%                         if(j==0)
+%                             patch1 = myPatch(S,nbP,i,j+1);
+%                         end
+%                         if(j==32)
+%                             patch1 = myPatch(S,nbP,i,j-1);
+%                         end
+                        patch2 = myPatch(T,nbP,x,y);
+                        ssd = SSD(patch, patch);
+                        if(ssd<minSSD)
+                            minSSD = ssd;
+                            coordImin = i
+                            coordJmin = j
                         end
                     end
                 end
+                T(x,y) = S(coordImin,coordJmin);
             end
         end
     end 
