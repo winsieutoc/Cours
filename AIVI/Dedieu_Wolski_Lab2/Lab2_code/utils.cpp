@@ -1,9 +1,10 @@
 #include "utils.hpp"
 
 #include <opencv2/imgproc/imgproc.hpp>
+#include <iostream>
 
 void
-computeErrorImage(const cv::Mat &im, const cv::Mat &imC, cv::Mat &imErr) 
+computeErrorImage(const cv::Mat &im, const cv::Mat &imC, cv::Mat &imErr)
 {
   assert(im.size() == imC.size()
 	 && im.type() == imC.type()
@@ -11,8 +12,8 @@ computeErrorImage(const cv::Mat &im, const cv::Mat &imC, cv::Mat &imErr)
 
   //We compute a displyable error image
   //We keep pixel values in [0; 255]
-  
-  imErr.create(imC.rows, imC.cols, CV_8UC1); //nothing done if matrix already has the desired size 
+
+  imErr.create(imC.rows, imC.cols, CV_8UC1); //nothing done if matrix already has the desired size
   int rows = im.rows;
   int cols = im.cols;
   if (im.isContinuous() && imC.isContinuous() && imErr.isContinuous()) {
@@ -53,10 +54,10 @@ double computeMSE(const cv::Mat &im, const cv::Mat &imC)
     for(int x = 0; x < cols; ++x) {
       sum += SQUARE((long)(p1[x]) - (long)(p2[x])); //Warning: do not compute with unsigned chars
     }
-  }  
+  }
 
   const double MSE = sum / (double)(im.cols * im.rows);
-  return MSE;  
+  return MSE;
 }
 
 double computePSNR(const cv::Mat &im, const cv::Mat &imC)
@@ -76,7 +77,7 @@ double computeEntropy(const cv::Mat &im)
 
   const int size = 256;
   long histogram[size] = {0};
-  
+
   int rows = im.rows;
   int cols = im.cols;
   if (im.isContinuous()) {
@@ -95,7 +96,7 @@ double computeEntropy(const cv::Mat &im)
   for (int i=0; i<size; ++i) {
     if (histogram[i] > 0) {
       const double pi = (double)(histogram[i]) / norm;
-	
+
 	entropy -= pi * log2(pi);
       }
   }
@@ -105,7 +106,7 @@ double computeEntropy(const cv::Mat &im)
 
 
 void
-drawMV(cv::Mat &img, const cv::Point &pt1, const cv::Point &pt2, 
+drawMV(cv::Mat &img, const cv::Point &pt1, const cv::Point &pt2,
        const cv::Scalar &color, const int thickness)
 {
   cv::Point p1 = pt1;
@@ -125,7 +126,7 @@ drawMV(cv::Mat &img, const cv::Point &pt1, const cv::Point &pt2,
   p1.y = (int) (p2.y + scaling_factor * sin(angle - M_PI / 4));
   cv::line(img, p1, p2, color, thickness, CV_AA, 0);
 #else
- 
+
   cv::line(img, p1, p2, color, thickness, CV_AA, 0);
   //cv::circle(img, p1, 2, color, -1);
   cv::circle(img, p2, 2, color, -1);
@@ -135,13 +136,13 @@ drawMV(cv::Mat &img, const cv::Point &pt1, const cv::Point &pt2,
 
 template <typename T>
 void
-drawMV(cv::Mat &img, 
-       const cv::Mat &motionVectors, 
+drawMV(cv::Mat &img,
+       const cv::Mat &motionVectors,
        int step,
-       const cv::Scalar &color, 
+       const cv::Scalar &color,
        const int thickness)
 {
-  const int blockSize = img.rows / motionVectors.rows; 
+  const int blockSize = img.rows / motionVectors.rows;
 
   const int halfBlockSize = blockSize / 2 ;
 
@@ -156,7 +157,7 @@ drawMV(cv::Mat &img,
     const T *p = motionVectors.ptr<T>(y);
 
     for(int x = 0; x < nbX; x+=step) {
-      
+
       const float mv_x = (p[x])[0];
       const float mv_y = (p[x])[1];
 
@@ -176,10 +177,10 @@ drawMV(cv::Mat &img,
 
 
 void
-drawMVi(cv::Mat &img, 
-	const cv::Mat &motionVectors, 
+drawMVi(cv::Mat &img,
+	const cv::Mat &motionVectors,
 	int step,
-	const cv::Scalar &color, 
+	const cv::Scalar &color,
 	const int thickness)
 {
   assert(motionVectors.type() == CV_32SC2);
@@ -195,16 +196,38 @@ computeCompensatedImage(const cv::Mat &motionVectors,
 
   assert(motionVectors.type() == CV_32SC2);
   assert(prev.type() == CV_8UC1);
-  
+
   const int blockSize = prev.cols/motionVectors.cols;
+  const int blockXCount = prev.cols / blockSize;
+  const int blockYCount = prev.rows / blockSize;
 
   //TODO: fill compensated
 
   //You can use rowRange/colRange to get blocks of images
   // and copyTo to copy these blocks
-  
+  for(int k=0; k<blockYCount; k++){
+    for(int l=0; l<blockXCount; l++){
+      int x = l * blockSize;
+      int y = k * blockSize;
+      cv::Mat block;
+
+      cv::Vec2i vector = motionVectors.at<cv::Vec2i>(k,l);
+      // std::cout << " x,y = " << x << " , " << y << '\n';
+      // std::cout << "vector = " << vector << '\n';
+      // assert(x+vector[0]+blockSize<=prev.cols);
+      // assert(y+vector[1]+blockSize<=prev.rows);
+      // std::cout << "assert ok " << k << " " << l << '\n';
+      if(x>=0 && y>=0 && x<prev.cols-blockSize && y<prev.rows-blockSize){
+        block = prev.rowRange(y+vector[1],y+vector[1]+blockSize).colRange(x+vector[0],x+vector[0]+blockSize);
+      }
+      else{
+        block = prev.rowRange(y,y+blockSize).colRange(x,x+blockSize);
+      }
+      cv::Mat tmp = compensated(cv::Rect(x,y,blockSize,blockSize));
+      block.copyTo(tmp);
+
+    }
+  }
+
 
 }
-
- 
-

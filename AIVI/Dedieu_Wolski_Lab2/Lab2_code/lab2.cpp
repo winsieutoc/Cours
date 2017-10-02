@@ -59,6 +59,7 @@ main(int argc, char **argv)
   std::queue<cv::Mat> previousFrames;
 
   std::ofstream myfile("stats.txt");
+  std::ofstream myfileEnt("statsEnt.txt");
 
   for ( ; ; ) {
 
@@ -67,11 +68,6 @@ main(int argc, char **argv)
     if (frameBGR.empty()) {
       break;
     }
-
-    //save frame
-    std::stringstream ss;
-    ss<<"frame_"<<std::setfill('0')<<std::setw(6)<<frameNumber<<".png";
-    cv::imwrite(ss.str(), frameBGR);
 
     //convert from BGR to Y
     cv::Mat frameY;
@@ -87,19 +83,32 @@ main(int argc, char **argv)
 
 	cv::Mat motionVectors;
 	blockMatchingMono(frameY, prevY, blockSize, windowSize, motionVectors);
-	cv::Mat YC;
+	cv::Mat YC(prevY.rows, prevY.cols,CV_8UC1);
 	computeCompensatedImage(motionVectors, prevY, YC);
+
+  //save frame
+  std::stringstream ss;
+  ss<<"../data/frame_"<<std::setfill('0')<<std::setw(6)<<frameNumber<<".png";
+  cv::imwrite(ss.str(), YC);
 
 	//TODO: compute measures (& display images) ...
   cv::Mat tmp = frameY.clone();
   drawMVi(tmp,motionVectors);
+  //std::cout << "motionVector:\n" << motionVectors << '\n';
   cv::imshow("image", tmp);
   cv::waitKey(10);
 
-  MSE = computeMSE(frameY, prevY);
+  MSE = computeMSE(prevY,YC);
+  PSNR = computePSNR(MSE);
+  ENT = computeEntropy(YC);
+  cv::Mat frameErr;
+  computeErrorImage(prevY, YC, frameErr);
+  ENTe = computeEntropy(frameErr);
+
 
 	std::cout<<frameNumber<<" "<<MSE<<" "<<PSNR<<" "<<ENT<<" "<<ENTe<<"\n";
   myfile << frameNumber << " " << MSE << std::endl;
+  myfileEnt << frameNumber << " " << PSNR << " " << ENT << " " << ENTe << std::endl;
       }
       else {
 
@@ -126,6 +135,7 @@ main(int argc, char **argv)
     ++frameNumber;
   }
 
+  myfileEnt.close();
   myfile.close();
   return EXIT_SUCCESS;
 }
