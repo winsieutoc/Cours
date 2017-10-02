@@ -36,10 +36,12 @@ function AnaglyphRenderer ( renderer ) {
 
   this.render = function ( scene, camera ) {
 
-    //var gl = renderer.domElement.getContext( 'webgl' );
+    var gl = renderer.domElement.getContext( 'webgl' );
+    gl.colorMask(true,false,false,false);
     this.update(camera);
     renderer.render(scene, this.cameraLeft);
     renderer.clearDepth();
+    gl.colorMask(false,true,true,false);
     renderer.render(scene, this.cameraRight);
 
 
