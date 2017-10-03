@@ -110,6 +110,7 @@ function init() {
 
   anaglyphRenderer = new AnaglyphRenderer( renderer );
   dofRenderer = new DoFRenderer( renderer );
+  dofRenderer.render(scene, camera);
 
   pickingTexture = new THREE.WebGLRenderTarget( window.innerWidth, window.innerHeight );
   pickingTexture.texture.minFilter = THREE.LinearFilter;
