@@ -85,14 +85,14 @@ function DoFRenderer ( renderer ) {
   // Delete offscreen buffer on dispose
   this.dispose = function() {
 		if ( this.renderTarget ) this.renderTarget.dispose();
-	}
+	};
 
-  function confusionCircle(distanceOfObserver){
-    var f = 17.0;
-    var m = f/(displayParameters.distanceScreenViewer-f);
-    var d = this.pupilDiameter;
-    var s1 = displayParameters.distanceScreenViewer;
-    var s = distanceOfObserver;
-    return m * d * (Math.abs(s-s1)/s);
-  };
+  // function confusionCircle(distanceOfObserver){
+  //   var f = 17.0;
+  //   var m = f/(displayParameters.distanceScreenViewer-f);
+  //   var d = this.pupilDiameter;
+  //   var s1 = displayParameters.distanceScreenViewer;
+  //   var s = distanceOfObserver;
+  //   return m * d * (Math.abs(s-s1)/s);
+  // };
 }
