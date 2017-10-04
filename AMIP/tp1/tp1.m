@@ -11,19 +11,19 @@ sizeS = size(S);
 
 sizeP = 3;
 patch = randPatch(S,sizeP);
-% figure
-% imagesc(patch)
+figure
+imagesc(patch)
 
-sizeT = [64, 64];
+sizeT = [98, 98];
 T = zeros(sizeT(1), sizeT(2), 3);
-centerX = sizeT(1) / 2 - sizeP / 2;
-centerY = sizeT(2) / 2 - sizeP / 2;
+centerX = fix(sizeT(1) / 2) - fix(sizeP / 2);
+centerY = fix(sizeT(2) / 2) - fix(sizeP / 2);
 T(centerX-1:centerX+1, centerY-1:centerY+1, :) = patch;
 figure
 imagesc(T)
 
 M = T;
-M(T > 0) = 1;
+M(M > 0) = 1;
 M = squeeze(M(:,:,1));
 
 se = strel('square', sizeP);
