@@ -19,10 +19,7 @@ patch = randPatch(S,nbP);
 figure
 imagesc(patch)
 
-centerW = sizeT(1) / 2;
-centerH = sizeT(2) / 2;
-
-T(centerW-1:centerW+1, centerH-1:centerH+1, :) = patch;
+T((sizeT(1)-nbP+1)/2: (sizeT(1)+nbP-1)/2,(sizeT(2)-nbP+1)/2: (sizeT(2)+nbP-1)/2, :) = patch;
 
 figure
 imagesc(T)
@@ -31,41 +28,43 @@ M = T;
 M(M > 0) = 1;
 
 se = strel('square', nbP);
-minSSD = 9000;
+coordImin = 0;
+coordJmin = 0;
 
 while M(M==0)==0
     L = M - imdilate(M,se);
     sizeL = size(L);
-    for x=1:sizeL(1)
-        for y=1:sizeL(2)
-            if L(x,y,:) == -1
-                for i=1:sizeS(1)
-                    for j=1:sizeS(2)
-                        coordImin = i
-                        coordJmin = j
-                        if(i==0 | j==0)
-                            patch1 = myPatch(S,nbP,i+1,j+1);
-                        end
-                        if(i==32 | j==32)
-                            patch1 = myPatch(S,nbP,i-1,j-1);
-                        end
-%                         if(j==0)
-%                             patch1 = myPatch(S,nbP,i,j+1);
-%                         end
-%                         if(j==32)
-%                             patch1 = myPatch(S,nbP,i,j-1);
-%                         end
-                        patch2 = myPatch(T,nbP,x,y);
-                        ssd = SSD(patch, patch);
-                        if(ssd<minSSD)
-                            minSSD = ssd;
-                            coordImin = i
-                            coordJmin = j
-                        end
+    figure(4)
+    imagesc(M)
+    drawnow
+    k = find(L==-1);
+    for w=1:size(k)
+        [x,y] = ind2sub(sizeL, k(w));
+        minSSD = -1;
+        if(x + nbP < sizeS(1) && x - nbP > 0 && y - nbP >0 && y + nbP < sizeS(2))
+            x
+            y
+            patchT = myPatch(T,nbP,sizeT(1),x,y);
+            for i=1:sizeS(1)
+                for j=1:sizeS(2)
+                    patchS = myPatch(S,nbP,sizeS(1),i,j);
+                    ssd = SSD(patchS, patchT);
+                    if(ssd<minSSD || minSSD == -1)
+                        minSSD = ssd;
+                        coordImin = i;
+                        coordJmin = j;
                     end
                 end
-                T(x,y) = S(coordImin,coordJmin);
             end
+            T(x,y,:) = S(coordImin,coordJmin,:);
+            M(x,y,:) = 1;
+
+            imagesc(T)
+            drawnow
+
+            imagesc(M)
+            drawnow
         end
-    end 
+    end
+    premierwhilefini=1
 end
