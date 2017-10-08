@@ -210,13 +210,7 @@ computeCompensatedImage(const cv::Mat &motionVectors,
       int x = l * blockSize;
       int y = k * blockSize;
       cv::Mat block;
-
       cv::Vec2i vector = motionVectors.at<cv::Vec2i>(k,l);
-      // std::cout << " x,y = " << x << " , " << y << '\n';
-      // std::cout << "vector = " << vector << '\n';
-      // assert(x+vector[0]+blockSize<=prev.cols);
-      // assert(y+vector[1]+blockSize<=prev.rows);
-      // std::cout << "assert ok " << k << " " << l << '\n';
       if(x>=0 && y>=0 && x<prev.cols-blockSize && y<prev.rows-blockSize){
         block = prev.rowRange(y+vector[1],y+vector[1]+blockSize).colRange(x+vector[0],x+vector[0]+blockSize);
       }

@@ -193,6 +193,13 @@ void Viewer::drawContents()
                 Point3f x = m_ray.at(m_hit.t());
                 Normal3f normal = m_hit.normal();
 
+                glUniform3f(m_flatProgram.uniform("color"),0.f,0.9f,0.f);
+
+                Vector3f i = -m_ray.direction;
+                for (int i = 0; i < 100; ++i) {
+//                    std::cout << i << std::endl;
+                    Line::draw(&m_flatProgram, x, x + 0.15f * m_hit.shape()->material()->is(normal,i));
+                }
                 glUniform3f(m_flatProgram.uniform("color"),0.9f,0.f,0.f);
                 Point::draw(&m_flatProgram, x);
                 Line::draw(&m_flatProgram, x, x + 0.25f * normal);

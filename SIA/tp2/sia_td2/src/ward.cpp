@@ -38,6 +38,23 @@ Color3f Ward::brdf(const Vector3f& viewDir, const Vector3f& lightDir, const Norm
     return fr+(m_diffuseColor/M_PI);
 }
 
+
+Color3f Ward::premultBrdf(const Vector3f& lightDir, const Vector3f& r, const Normal3f& normal, const Vector2f texcoord){
+    Vector3f i = lightDir;
+    float u = Eigen::internal::random<float>(0,1);
+    float v = Eigen::internal::random<float>(0,1);
+    float phiH = atan((m_alphaY/m_alphaX)*tan(2.0*M_PI*v));
+
+    float cos1 = (cos(phiH)*cos(phiH))/(m_alphaX*m_alphaX);
+    float sin1 = (sin(phiH)*sin(phiH))/(m_alphaY*m_alphaY);
+
+    float thetaH =  atan(sqrt(-log(u)/(cos1+ sin1)));
+    Vector3f h = Vector3f(sin(thetaH)*cos(phiH), sin(thetaH)*sin(phiH), cos(thetaH));
+
+    float expo = -(tan(thetaH)*tan(thetaH))*(cos1+sin1);
+    Color3f fr = (m_specularColor/(4*M_PI*m_alphaX*m_alphaY*sqrt(i.dot(normal)*(o.dot(normal))))) * exp(expo);
+}
+
 std::string Ward::toString() const {
     return tfm::format(
         "Ward [\n" 
@@ -47,6 +64,22 @@ std::string Ward::toString() const {
         "]", m_diffuseColor.toString(),
              m_specularColor.toString(),
              m_alphaX, m_alphaY);
+}
+
+
+Vector3f Ward::is(const Normal3f& normal, const Vector3f& lightDir) const {
+    Vector3f i = lightDir;
+    float u = Eigen::internal::random<float>(0,1);
+    float v = Eigen::internal::random<float>(0,1);
+    float phiH = atan((m_alphaY/m_alphaX)*tan(2.0*M_PI*v));
+
+    float cos1 = (cos(phiH)*cos(phiH))/(m_alphaX*m_alphaX);
+    float sin1 = (sin(phiH)*sin(phiH))/(m_alphaY*m_alphaY);
+
+    float thetaH =  atan(sqrt(-log(u)/(cos1+ sin1)));
+    Vector3f h = Vector3f(sin(thetaH)*cos(phiH), sin(thetaH)*sin(phiH), cos(thetaH));
+    Vector3f o = 2.0*(i.dot(h))*h-i;
+    return o;
 }
 
 REGISTER_CLASS(Ward, "ward")

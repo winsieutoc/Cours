@@ -61,6 +61,14 @@ main(int argc, char **argv)
   std::ofstream myfile("stats.txt");
   std::ofstream myfileEnt("statsEnt.txt");
 
+  std::ofstream myfileBIS("statsBIS.txt");
+  std::ofstream myfileMSE("statsMSE.txt");
+
+  cv::string nameImg[nbLevels];
+  for(int s=nbLevels-1; s>=0; s--){
+    nameImg[s] = "image"+std::to_string(s);
+  }
+
   for ( ; ; ) {
 
     cv::Mat frameBGR;
@@ -77,13 +85,14 @@ main(int argc, char **argv)
       cv::Mat prevY = previousFrames.front();
       previousFrames.pop();
 
-      double MSE, PSNR, ENT, ENTe;
+
 
       if (nbLevels == 1) {
+double MSE, PSNR, ENT, ENTe;
 
 	cv::Mat motionVectors;
 	blockMatchingMono(frameY, prevY, blockSize, windowSize, motionVectors);
-	cv::Mat YC(prevY.rows, prevY.cols,CV_8UC1);
+  cv::Mat YC(prevY.rows, prevY.cols,CV_8UC1);
 	computeCompensatedImage(motionVectors, prevY, YC);
 
   //save frame
@@ -115,15 +124,40 @@ main(int argc, char **argv)
 	std::vector<cv::Mat> levelsY;
 	std::vector<cv::Mat> levelsPrevY;
 	std::vector<cv::Mat> motionVectorsP;
+  std::vector<float> MSE;
+  std::vector<float> PSNR;
+  std::vector<float> ENT;
 	blockMatchingMulti(frameY, prevY, blockSize, windowSize, nbLevels, levelsY, levelsPrevY, motionVectorsP);
 
 	std::cout<<frameNumber;
+  myfileMSE<<frameNumber<< " ";
+  MSE.resize(nbLevels);
+  PSNR.resize(nbLevels);
+  ENT.resize(nbLevels);
 	for (int i=nbLevels-1; i>=0; --i) {
+    cv::Mat YC(levelsPrevY[i].rows, levelsPrevY[i].cols,CV_8UC1);
+    computeCompensatedImage(motionVectorsP[i], levelsPrevY[i], YC);
+    cv::Mat tmp = YC.clone();
+    drawMVi(tmp,motionVectorsP[i]);
+    cv::imshow(nameImg[i], tmp);
+    cv::waitKey(10);
 
-	  //TODO : compute measures  (& display images) ...
+    MSE[i] = computeMSE(levelsPrevY[i],YC);
+    PSNR[i] = computePSNR(MSE[i]);
+    ENT[i] = computeEntropy(YC);
 
-	  std::cout<<" "<<MSE<<" "<<PSNR<<" "<<ENT<<" "<<ENTe;
+    // myfileBIS << frameNumber << " En "<< i <<" "<<MSE<< " " << PSNR << " " << ENT << std::endl;
+    std::cout<< "res = " <<" "<<MSE[i]<<" "<<PSNR[i]<<" "<<ENT[i];
+    myfileMSE<<MSE[i]<< " ";
 	}
+  myfileMSE  << std::endl;
+  // myfileMSE << frameNumber << " ";
+  // for (int i = nbLevels-1; i >=0 ; i--) {
+  //   myfileMSE << MSE[i] << " ";
+  // }
+  myfileMSE << "\n";
+
+  myfileBIS << std::endl;
 	std::cout<<"\n";
       }
 
@@ -135,6 +169,8 @@ main(int argc, char **argv)
     ++frameNumber;
   }
 
+  myfileMSE.close();
+  myfileBIS.close();
   myfileEnt.close();
   myfile.close();
   return EXIT_SUCCESS;

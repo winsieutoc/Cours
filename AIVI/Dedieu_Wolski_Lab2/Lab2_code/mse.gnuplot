@@ -8,7 +8,7 @@
 # to the file out.png
 
 set terminal png
-set output "graph/mse.png"
+set output "data/mse.png"
 
 set xlabel "Frames"
 set ylabel "MSE"

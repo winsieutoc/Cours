@@ -95,8 +95,43 @@ void blockMatchingMono2(const cv::Mat &m1, const cv::Mat &m2,
   //Here we suppose that m1.cols & m1.rows are multiple of blockSize
   const int blockXCount = m1.cols / blockSize;
   const int blockYCount = m1.rows / blockSize;
+	motionVectors.create(blockYCount, blockXCount, CV_32SC2);
 
   //TODO : fill motionVectors
+	cv::Mat ssBlock1;
+	cv::Mat ssBlock2;
+	int x, y;
+	double resMin;
+	for (int k = 0; k < blockYCount; k++) { //ROWS
+		for (int l = 0; l < blockXCount; l++) { //COLS
+			x = l*blockSize; // COLS
+			y = k*blockSize; // ROWS
+			if(y+blockSize<m1.rows && x+blockSize<m1.cols){
+				ssBlock1 = m1.rowRange(y,y+blockSize).colRange(x,x+blockSize);
+				int xBest = 0;
+				int yBest = 0;
+				resMin = DBL_MAX;
+				const int minX = std::max(x-windowSize/2,0);
+				const int minY = std::max(y-windowSize/2,0);
+				const int maxX = std::min(x+windowSize/2,m1.cols)-blockSize;
+				const int maxY = std::min(y+windowSize/2,m1.rows)-blockSize;
+				for (int i = minX; i < maxX; i++) { //ROWS
+					for (int j = minY; j < maxY; j++) { //COLS
+						if(i>=0 && j>=0 && i+blockSize<m2.cols && j+blockSize<m2.rows){
+							ssBlock2 = m2.rowRange(j,j+blockSize).colRange(i,i+blockSize);
+							double res = computeMSE(ssBlock1,ssBlock2);
+							if(res<resMin){
+								resMin = res;
+								xBest = i;
+								yBest = j;
+							}
+						}
+					}
+				}
+				motionVectors.at<cv::Vec2i>(k,l) = cv::Vec2i(xBest-x, yBest-y); //(x-j, y-i)
+			}
+		}
+	}
 
 }
 

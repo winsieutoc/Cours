@@ -16,6 +16,8 @@ public:
     virtual float etaA() const { return m_etaA; }
     virtual float etaB() const { return m_etaB; }
 
+    virtual Vector3f is(const Normal3f& normal, const Vector3f& lightDir) const = 0;
+
     /// evaluate the BRDF
     virtual Color3f brdf(const Vector3f& viewDir, const Vector3f& lightDir, const Normal3f& normal, const Vector2f& uv) const = 0;
 
@@ -36,6 +38,7 @@ protected:
     void setTextureMode(TextureMode textureMode) { m_textureMode = textureMode; }
 
     EClassType getClassType() const { return EMaterial; }
+
 
 protected:
     Color3f m_reflectivity;
@@ -59,6 +62,8 @@ public:
    Color3f reflectivity() const { return Color3f(0); }
 
    Color3f brdf(const Vector3f& viewDir, const Vector3f& lightDir, const Normal3f& normal, const Vector2f& uv) const { return diffuseColor(uv) * INV_PI; }
+
+   virtual Vector3f is(const Normal3f& normal, const Vector3f& lightDir) const {return Vector3f(0.0);}
 
    std::string toString() const {
        return tfm::format(
@@ -98,6 +103,8 @@ public:
     Color3f brdf(const Vector3f& viewDir, const Vector3f& lightDir, const Normal3f& normal, const Vector2f& uv) const;
 
     std::string toString() const;
+
+    virtual Vector3f is(const Normal3f& normal, const Vector3f& lightDir) const;
 
 protected:
     Color3f m_specularColor;

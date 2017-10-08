@@ -54,4 +54,6 @@ Color3f Diffuse::diffuseColor(const Vector2f& uv) const
     return fColor;
 }
 
+//us(normal,pdf)
+
 REGISTER_CLASS(Diffuse, "diffuse")

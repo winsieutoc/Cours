@@ -8,7 +8,7 @@
 # to the file outEntPSNR.png
 
 set terminal png
-set output "graph/GraphEntropyPSNR.png"
+set output "data/GraphEntropyPSNR.png"
 
 set xlabel "Frames"
 set ylabel "PSNR,ENT,ENTERR"
