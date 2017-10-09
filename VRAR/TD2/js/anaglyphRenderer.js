@@ -44,7 +44,6 @@ function AnaglyphRenderer ( renderer ) {
     gl.colorMask(false,true,true,false);
     renderer.render(scene, this.cameraRight);
 
-
   }
 
 }

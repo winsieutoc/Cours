@@ -45,32 +45,75 @@
 
 <h4>1.1 Principe général</h4>
 
+Dans un premier temps nous avons eu à remplir la fonction <B>this.update = function ( camera )</B> dans la classe <B>AnaglyphRenderer</B>,
+cela afin de créer et remplir les matrices de projections de l'oeil gauche et de l'oeil droit à l'aide des formules fournis dans les slides.
+Ces deux matrices seront chacune assigné à une camera différente, une par oeil.
+
 <h4>1.2 Anaglyphe</h4>
 
-<h3>2. Profondeur de champs</h3>
-
-<h4>2.1. Cercle de confusion</h4>
-
-<h4>2.2. Rendu avec profondeur de champ</h4>
-
-
-<div style>
-  <figure>
-  	<img src="tw_areagood.png" width="400" alt="tw texture" />
-    <img src="tw_areaText.png" width="400" alt="tw texture zoom" />
-  </figure>
-  <figcaption>Échantillonnage stratifié  avec texture</figcaption>
-</div>
-
-<p>Code de Wrap.cpp :
+Après avoir géré tous ce qui est création des deux caméras, oeil gauche / oeil droit, nous n'avons plus qu'a appliquer un affiché coloré différent sur chaque oeils.
+Cela afin de reproduire un affichage 3D à l'aide de lunette cyen/rouge, chaque oeils verra la couleur qui lui correspond et cela créera cette effet de 3D.
 
 <div class="highlight">
-<pre><code class="cpp">
-
+<pre><code class="cpp">this.render = function ( scene, camera ) {
+    var gl = renderer.domElement.getContext( 'webgl' );
+    gl.colorMask(true,false,false,false);
+    this.update(camera);
+    renderer.render(scene, this.cameraLeft);
+    renderer.clearDepth();
+    gl.colorMask(false,true,true,false);
+    renderer.render(scene, this.cameraRight);
+  }
 </code></pre></div>
 </p>
 
+<div style>
+  <figure>
+  	<img src="anaglyph.png" width="70%" alt="anaglyph" />
+  </figure>
+  <figcaption>Résultat obtenus à la fin de cette partie</figcaption>
+</div>
 
+<h3>2. Profondeur de champs</h3>
+
+Dans cette partie, nous devons implémenter une profondeur sur le champ de vision de la caméra, c'est à dire ce qui sera sur les bords / vue de loin sera flou.
+
+<h4>2.1. Cercle de confusion</h4>
+
+Dans cette partie il était demander de comprendre le principe du cercle de confusion expliqué dans les slides.
+
+<h4>2.2. Rendu avec profondeur de champ</h4>
+
+Afin de mettre en place cette effet de flou, nous avons à remplir les fonctions présente dans <B>shaderDof.frag</B> à l'aide des formules mathématiques présente dans les slides
+ ainsi que l'algorithme qui y est expliqué.
+Cela étant fait nous avions un flou fixe, il ne nous resté plus qu'à faire en sorte que le cercle de confusion soit centré sur notre curseur (soit notre direct de vue).
+
+<div style>
+  <figure>
+  	<img src="flou1.png" width="70%" alt="flou1" />
+    <img src="flou2.png" width="70%" alt="flou2" />
+  </figure>
+  <figcaption>Resultats de flou avec vue sur le sol, puis sur la tnt</figcaption>
+</div>
+</br>
+
+Nous avons rencontré un problème dans cette partie lorsque nous avons fini de la coder. Le problème était que dès que nous nous déplacions la camera se déplacé d'un coup très vite et nous perdions
+notre scene de vue. La solution afin de palier à cela nous a été proposé par un camarade et elle était de modifier dans <B>render.js</B> les calculs de déplacement et de les divisés par 10.
+Mais nous ne sommes pas réellement sûr que le problème venait de la, malgré qu'effectivement cela a résolue notre problème de déplacement.
+
+<div class="highlight">
+<pre><code class="cpp">velocity.x -= velocity.x * 10.0 * delta;
+velocity.z -= velocity.z * 10.0 * delta;
+
+if ( moveForward ) velocity.z -= 1500.0 * delta;
+if ( moveBackward ) velocity.z += 1500.0 * delta;
+
+if ( moveLeft ) velocity.x -= 1500.0 * delta;
+if ( moveRight ) velocity.x += 1500.0 * delta;
+</code></pre></div>
+</p>
+
+</br>
 </div>
 
 <script type="text/javascript">
