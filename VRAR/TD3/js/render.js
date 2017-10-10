@@ -4,6 +4,7 @@ var renderer;
 
 var Menu = function() {
   this.threshold = false;
+  this.color = "#ffffff";
 };
 
 var menu, stats;
@@ -32,6 +33,7 @@ function init() {
   menu = new Menu();
   var gui = new dat.GUI();
   gui.add(menu, 'threshold');
+  gui.add(menu, 'color');
 
   // stats
   stats = new Stats();
