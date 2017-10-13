@@ -4,7 +4,7 @@ var renderer;
 
 var Menu = function() {
   this.threshold = false;
-  this.color = "#ffffff";
+  this.color = [ 255, 255, 255 ];
 };
 
 var menu, stats;
