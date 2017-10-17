@@ -13,7 +13,7 @@ var FizzyText = function() {
   this.color = [ 0, 128, 255, 0.3 ]; // RGB with alpha
   this.color3 = { h: 350, s: 0.9, v: 0.3 }; // Hue, saturation, value
 
-  this.tolerance = 15;
+  this.tolerance = 30;
 
   // Define render logic ...
 
@@ -97,10 +97,12 @@ function animate() {
     context.drawImage(video, 0, 0, canvas.width, canvas.height);
     imageData = context.getImageData(0, 0, canvas.width, canvas.height);
 
-    var tmp = new CV.Image(canvas.width, canvas.height)
+    var tmp = new CV.Image(canvas.width, canvas.height);
     var whitedata = [255,255,255,255];
     var blackdata = [0,0,0,0];
     var src = imageData.data, len = src.length;
+    var imgDst = tmp.data;
+    var binary = new CV.Image(canvas.width, canvas.height);
     if(menu.threshold){
       for (var i = 0; i < len; i+=4) {
         if(src[i]>text.color[0]-text.tolerance && src[i+1]>text.color[1]-text.tolerance && src[i+2]>text.color[2]-text.tolerance
@@ -108,13 +110,49 @@ function animate() {
           imageDst.data[i]=255.0;
           imageDst.data[i+1]=255.0;
           imageDst.data[i+2]=255.0;
+          imgDst[i/4] = 255;
         }
         else {
           imageDst.data[i]=0.0;
           imageDst.data[i+1]=0.0;
           imageDst.data[i+2]=0.0;
+          imgDst[i/4] = 0;
         }
       }
+
+      var dist = 0.0;
+      var barX, barY;
+      var contours = CV.findContours(tmp,binary);
+      for(var i=0; i<contours.length;i++){
+        var sizePol =0.0;
+        var x = 0.0;
+        var y = 0.0;
+        var Sumx=0.0;
+        var Sumy=0.0; //pour la barycentre
+        for(var j=0; j<contours[i].length;j++){
+          Sumx+=contours[i][j].x;
+          Sumy+=contours[i][j].y;
+          sizePol++;
+        }
+
+        Sumx= Sumx/sizePol;
+        Sumy= Sumy/sizePol;
+        //coordonnée barycentrique
+        for(var j=0; j<contours[i].length;j++){
+          x = contours[i][j].x;
+          y = contours[i][j].y;
+          if (dist<Math.sqrt ((x-Sumx)*(x-Sumx) + (y-Sumy)*(y-Sumy))){
+            dist  = Math.sqrt ((x-Sumx)*(x-Sumx) + (y-Sumy)*(y-Sumy));
+            barX = Sumx;
+            barY = Sumy;
+          }
+        }
+      }
+
+      context.beginPath();
+      context.arc(barX,barY,dist,0,2*Math.PI);
+      context.stroke();
+
     }
     else{
       imageDst.data.set(imageData.data);

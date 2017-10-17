@@ -52,31 +52,57 @@ end
 figure(3)
 imagesc(C)
 
+ssdmid = 0;
+ssdLeft = 0;
+coordXLeft = 0;
+coordYLeft = 0;
+ssdTop = 0;
+coordXTop = 0;
+coordYTop = 0;
+minSSD = 9000;
+minX = 0;
+minY = 0;
 
+for w=1:size(NNF)
+    if(NNF(w)~=0)
+        x = fix( w / sizeA(2));
+        y = w - x*sizeA(2);
+        patchA = myPatch(A,sizePatch,sizeA(1),x,y);
+        ssdmid = SSDNNF(y+x*sizeA(2));
+        if(x>4 && x<sizeA(2)-4 && y>4 && y<sizeA(2))
+            % SSD LEFT
+            coordXLeft = fix( NNF(w-1)/ sizeA(2));
+            coordYLeft = NNF(w-1)- coordXLeft*sizeA(2);
+            patchBLeft = myPatch(B,sizePatch,sizeB(1),coordXLeft,(coordYLeft+1));
+            ssdLeft = SSD(patchBLeft,patchA);
+            % SSD TOP
+            coordXTop = fix( NNF(w-sizeA(2)) / sizeA(2));
+            coordYTop = NNF(w-sizeA(2))- coordXTop*sizeA(2);
+            patchBTop = myPatch(B,sizePatch,sizeB(1),(coordXTop-1),coordYTop);
+            ssdTop = SSD(patchBLeft,patchA);
 
+            if(minSSD>ssdmid)
+                minSSD=ssdmid;
+                minX = x;
+                minY = y;
+            end
+            if(minSSD>ssdLeft)
+                minSSD=ssdLeft;
+                minX = coordXLeft;
+                minY = coordYLeft-1;
+            end
+            if(minSSD>ssdTop)
+                minSSD=ssdTop;
+                minX = coordXTop-1;
+                minY = coordYTop;
+            end
 
-
-% minSSD = intmax;
-% coordXA = 0;
-% coordYA = 0;
-% for x=1:sizeC(1)
-%     for y=1:sizeC(2)
-%         a = C(x,y,:);
-%         for i=1:sizeA(1)
-%             for j=1:sizeA(2)
-%                 b = A(i,j,:);
-%                 if isequal(a,b)
-%                     %calcul de la SSD entre top et left !
-%                     ssd = SSD(a,b);
-%                     if ssd < minSSD
-%                         minSSD = ssd;
-%                         coordXA = i;
-%                         coordYA = j;
-%                     end
-%                 end
-%             end
-%         end
-%         coordXA
-%         coordYA
-%     end
-% end
+            NNF(y+x*sizeA(2))=minY+minX*sizeB(2);
+            SSDNNF(y+x*sizeA(2))=minSSD;
+            
+            C(x,y,:)=B(minX,minY,:);
+            imagesc(C);
+            drawnow;
+        end
+    end
+end
