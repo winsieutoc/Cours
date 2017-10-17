@@ -42,7 +42,7 @@ end
 figure(3)
 imagesc(C)
 
-for passage=1:6
+for passage=1:200
     if(mod(passage,2)==1)
         for x=1+(sizePatch+1):sizeNNF(1)-(sizePatch+1)
            for y=1+(sizePatch+1):sizeNNF(2)-(sizePatch+1)
@@ -55,8 +55,8 @@ for passage=1:6
 
                patchA = myPatch(A,sizePatch,x,y);
                patchMid = myPatch(B,sizePatch,xBMid,yBMid);
-               patchNextHori = myPatch(B,sizePatch,xBNextHori,yBNextHori);
-               patchNextVert = myPatch(B,sizePatch,xBNextVert,yBNextVert);
+               patchNextHori = myPatch(B,sizePatch,xBNextHori,yBNextHori-1);
+               patchNextVert = myPatch(B,sizePatch,xBNextVert-1,yBNextVert);
 
                ssdMid = SSD(patchA,patchMid);
                ssdNextHori = SSD(patchA,patchNextHori);
@@ -94,8 +94,8 @@ for passage=1:6
 
                patchA = myPatch(A,sizePatch,x,y);
                patchMid = myPatch(B,sizePatch,xBMid,yBMid);
-               patchNextHori = myPatch(B,sizePatch,xBNextHori,yBNextHori);
-               patchNextVert = myPatch(B,sizePatch,xBNextVert,yBNextVert);
+               patchNextHori = myPatch(B,sizePatch,xBNextHori,yBNextHori+1);
+               patchNextVert = myPatch(B,sizePatch,xBNextVert+1,yBNextVert);
 
                ssdMid = SSD(patchA,patchMid);
                ssdNextHori = SSD(patchA,patchNextHori);
