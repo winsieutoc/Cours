@@ -42,7 +42,7 @@ end
 figure(3)
 imagesc(C)
 
-for passage=1:200
+for passage=1:10
     if(mod(passage,2)==1)
         for x=1+(sizePatch+1):sizeNNF(1)-(sizePatch+1)
            for y=1+(sizePatch+1):sizeNNF(2)-(sizePatch+1)
