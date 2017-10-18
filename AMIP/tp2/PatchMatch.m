@@ -42,7 +42,9 @@ end
 figure(3)
 imagesc(C)
 
-for passage=1:10
+sizePatchHalf = fix(sizePatch/2);
+
+for passage=1:2
     if(mod(passage,2)==1)
         for x=1+(sizePatch+1):sizeNNF(1)-(sizePatch+1)
            for y=1+(sizePatch+1):sizeNNF(2)-(sizePatch+1)
@@ -65,17 +67,15 @@ for passage=1:10
                minSSD = min([ssdMid ssdNextHori ssdNextVert]);
 
                if(minSSD == ssdMid)
-                   C(x-fix(sizePatch/2):x+fix(sizePatch/2),y-fix(sizePatch/2):y+fix(sizePatch/2),:) = patchMid;
+                   C(x-sizePatchHalf:x+sizePatchHalf,y-sizePatchHalf:y+sizePatchHalf,:) = patchMid;
                    %C(x,y,:)=B(xBMid,yBMid,:);
-                   NNF(x,y,1)=xBMid;
-                   NNF(x,y,2)=yBMid;
                elseif(minSSD == ssdNextHori)
-                   C(x-fix(sizePatch/2):x+fix(sizePatch/2),y-fix(sizePatch/2):y+fix(sizePatch/2),:) = patchNextHori;
+                   C(x-sizePatchHalf:x+sizePatchHalf,y-sizePatchHalf:y+sizePatchHalf,:) = patchNextHori;
                    %C(x,y,:)=B(xBNextHori,yBNextHori,:);
                    NNF(x,y,1)=xBNextHori;
                    NNF(x,y,2)=yBNextHori;
                elseif(minSSD == ssdNextVert)
-                   C(x-fix(sizePatch/2):x+fix(sizePatch/2),y-fix(sizePatch/2):y+fix(sizePatch/2),:) = patchNextVert;
+                   C(x-sizePatchHalf:x+sizePatchHalf,y-sizePatchHalf:y+sizePatchHalf,:) = patchNextVert;
                    %C(x,y,:)=B(xBNextVert,yBNextVert,:);
                    NNF(x,y,1)=xBNextVert;
                    NNF(x,y,2)=yBNextVert;
@@ -104,17 +104,15 @@ for passage=1:10
                minSSD = min([ssdMid ssdNextHori ssdNextVert]);
 
                if(minSSD == ssdMid)
-                   C(x-fix(sizePatch/2):x+fix(sizePatch/2),y-fix(sizePatch/2):y+fix(sizePatch/2),:) = patchMid;
+                   C(x-sizePatchHalf:x+sizePatchHalf,y-sizePatchHalf:y+sizePatchHalf,:) = patchMid;
                    %C(x,y,:)=B(xBMid,yBMid,:);
-                   NNF(x,y,1)=xBMid;
-                   NNF(x,y,2)=yBMid;
                elseif(minSSD == ssdNextHori)
-                   C(x-fix(sizePatch/2):x+fix(sizePatch/2),y-fix(sizePatch/2):y+fix(sizePatch/2),:) = patchNextHori;
+                   C(x-sizePatchHalf:x+sizePatchHalf,y-sizePatchHalf:y+sizePatchHalf,:) = patchNextHori;
                    %C(x,y,:)=B(xBNextHori,yBNextHori,:);
                    NNF(x,y,1)=xBNextHori;
                    NNF(x,y,2)=yBNextHori;
                elseif(minSSD == ssdNextVert)
-                   C(x-fix(sizePatch/2):x+fix(sizePatch/2),y-fix(sizePatch/2):y+fix(sizePatch/2),:) = patchNextVert;
+                   C(x-sizePatchHalf:x+sizePatchHalf,y-sizePatchHalf:y+sizePatchHalf,:) = patchNextVert;
                    %C(x,y,:)=B(xBNextVert,yBNextVert,:);
                    NNF(x,y,1)=xBNextVert;
                    NNF(x,y,2)=yBNextVert;
