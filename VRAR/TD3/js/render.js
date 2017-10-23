@@ -46,7 +46,7 @@ function init() {
   gui.add(menu, 'threshold');
   window.addEventListener( 'mousedown', getColor, false );
   gui.addColor(text, 'color').listen();
-  gui.add(text, 'tolerance').listen();
+  gui.add(text, 'tolerance',0,255);
 
 
 
