@@ -16,7 +16,7 @@ void main() {
 	float yd = (vUv.y - centerCoordinate.y)*(1.0 + K.x*r*r + K.y*r*r*r*r) + centerCoordinate.y;
 	vec2 res = vec2(xd,yd);
 
-	if(xd>0.0 && xd<1.0 && yd>0.0 && yd<1.0){
+	if(xd>=0.0 && xd<=1.0 && yd>=0.0 && yd<=1.0){
 		gl_FragColor = texture2D(colorMap, res);
 	}else{
 		gl_FragColor = vec4(0.0,0.0,0.0,1.0);
