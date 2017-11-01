@@ -28,8 +28,9 @@ function init() {
 
   var fov = THREE.Math.radToDeg(Math.atan( displayParameters.screenSize().y/ displayParameters.distanceScreenViewer()));
   camera = new THREE.PerspectiveCamera( fov, window.innerWidth / window.innerHeight, 1, 100000 );
+  camera.position.y=100;
 
-  cameraOrtho = new THREE.OrthographicCamera( - window.innerWidth / 2, window.innerWidth / 2, window.innerHeight / 2, - window.innerHeight / 2, 1, 10 );
+  cameraOrtho = new THREE.OrthographicCamera( - window.innerWidth / 2, window.innerWidth / 2 +1, window.innerHeight / 2, - window.innerHeight / 2, 1, 10 );
   cameraOrtho.position.z = 10;
 
   // scene
@@ -114,9 +115,12 @@ function init() {
   pickingTexture.texture.minFilter = THREE.LinearFilter;
 
   // Camera controler
-  controls = new THREE.PointerLockControls( camera, renderer.domElement );
-  scene.add( controls.getObject() );
-  controls.enabled = true;
+  // controls = new THREE.PointerLockControls( camera, renderer.domElement );
+  // scene.add( controls.getObject() );
+  // controls.enabled = true;
+
+  controls = new THREE.DeviceOrientationControls( camera, renderer.domElement );
+  controls.connect();
 
   var onKeyDown = function ( event ) {
 
@@ -226,7 +230,7 @@ function onWindowResize() {
 function animate() {
 
   requestAnimationFrame( animate );
-
+  controls.update();
   render();
 }
 
@@ -264,6 +268,8 @@ function pick(event) {
   scene.overrideMaterial = null;
 }
 
+
+
 function render() {
 
   var delta = clock.getDelta();
@@ -277,8 +283,8 @@ function render() {
   if ( moveLeft ) velocity.x -= 15000.0 * delta;
   if ( moveRight ) velocity.x += 15000.0 * delta;
 
-  controls.getObject().translateX( velocity.x * delta );
-  controls.getObject().translateZ( velocity.z * delta );
+  // controls.getObject().translateX( velocity.x * delta );
+  // controls.getObject().translateZ( velocity.z * delta );
 
   renderer.clear();
 

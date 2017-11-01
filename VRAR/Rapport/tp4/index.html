@@ -42,37 +42,27 @@
 <h2>TD3 - Suivi de l'observateur</h2>
 
 <h3>1. Suivi d'un marqueur coloré</h3>
-Pour pouvoir sélectionner la couleur pointée par la souris, nous avons utilisé une structure
-<strong>FizzyText</strong> qui nous permet d'avoir les canaux de couleur et le coefficient de transparence.
-On ajoute alors ces données au menu affiché en haut, à droite de l'écran.
-<br>
-Ainsi si on active le threshold, il suffit de cliquer sur la couleur à seuiller pour observer une distinction
-binaire entre cette couleur (+/- la tolérence) et le reste des pixels de l'image source.
-<br>
-Pour détecter les contours, nous avons utilisé la fonction CV.findContours qui nous est fournie; à l'aide celle-ci
-nous pouvons calculer les coordonnées barycentriques des polygones détectés aux contours. Parmi ces polygones, on
-conserve le plus grand. Grace aux coordonnées calculées plus tôt on dessine le cercle englobant.
-<br>
-Note : Nous n'avons pas implémenté la version HSV, car nos résultats avec la version RGB sont satisfaisants.
-
 
 <h3>2. Stéréo et tracking</h3>
 
 <h4>2.1. Calibration de la caméra</h4>
-Afin de calibrer notre caméra, nous avons suivi le tutoriel indiqué sur la page. Nous avons la matrice
-suivante (nous avons arrondie les valeurs par soucis de clarté):
-<div class="highlight">
-<pre><code class="xml">36.38  0.00  23.61
-0.00  36.38 17.70
-0.00  0.00  1.00
-</code></pre></div>
-</p>
 
 <h4>2.2. Calcul de la profondeur</h4>
-Nous n'avons pas implémenté cette partie, mais nous avions quelques pistes pour calculer
-la distance entre l'objet et l'écran. Il aurait fallu utilisé Thalès. Le problème majeure
-qui nous a ralentit est l'uniformisation des deux tp.
 
+<div style>
+  <figure>
+  	<img src="flou1.png" width="70%" alt="flou1" />
+    <img src="flou2.png" width="70%" alt="flou2" />
+  </figure>
+  <figcaption>Légende</figcaption>
+</div>
+</br>
+
+<div class="highlight">
+<pre><code class="cpp">
+
+</code></pre></div>
+</p>
 
 </br>
 </div>
