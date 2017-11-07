@@ -39,30 +39,70 @@
 
 <h1>RVRA - Faysal Ahmed Khaled & Wolski Axel</h1>
 
-<h2>TD3 - Suivi de l'observateur</h2>
+<h2>TD4 - Visiocasque "en carton"</h2>
 
-<h3>1. Suivi d'un marqueur coloré</h3>
+<h3>1. Rendu Stéréo pour le visiocasque</h3>
+En nous basant sur les slides de Gordon Wetzstein, nous avons implémenté les fonctions distanceScreenViewer
+et lensMagnification ainsi que les matrices de projection.
+Nous avons travaillé avec un smartphone Samsung S8, 2220x1080.
 
-<h3>2. Stéréo et tracking</h3>
 
-<h4>2.1. Calibration de la caméra</h4>
+Nous avons ensuite utilisé la méthode setViewport pour que les rendus soient uniformes.
 
-<h4>2.2. Calcul de la profondeur</h4>
+<div class="highlight">
+<pre><code class="cpp">// Left eye
+  renderer.setViewport(0,0,window.innerWidth/2, window.innerHeight);
+  renderer.clearTarget( this.renderTargetLeft, true, true, false);
+  renderer.render( scene, this.cameraLeft, this.renderTargetLeft);
+
+  uniforms.colorMap.value = this.renderTargetLeft.texture;
+  uniforms.centerCoordinate.value.x = 0.5; // TODO
+  renderer.render( this.scene, this.camera );
+
+  // Right eye
+  renderer.setViewport(window.innerWidth/2, 0, window.innerWidth/2, window.innerHeight);
+  renderer.clearTarget( this.renderTargetRight, true, true, false);
+  renderer.render( scene, this.cameraRight, this.renderTargetRight);
+
+  uniforms.colorMap.value = this.renderTargetRight.texture;
+  uniforms.centerCoordinate.value.x = 0.5; // TODO
+  renderer.render( this.scene, this.camera );
+</code></pre></div>
+</p>
+
+<h3>2. Correction des distorsions</h3>
+
+Dans cette partie nous avons eu à mettre en place 
+
+<div class="highlight">
+<pre><code class="cpp">void main() {
+  	float r = sqrt((vUv.x-centerCoordinate.x)*(vUv.x-centerCoordinate.x)+(vUv.y-centerCoordinate.y)*(vUv.y-centerCoordinate.y));
+  	float xd = (vUv.x - centerCoordinate.x)*(1.0 + K.x*r*r + K.y*r*r*r*r) + centerCoordinate.x;
+  	float yd = (vUv.y - centerCoordinate.y)*(1.0 + K.x*r*r + K.y*r*r*r*r) + centerCoordinate.y;
+  	vec2 res = vec2(xd,yd);
+
+  	if(xd>=0.0 && xd<=1.0 && yd>=0.0 && yd<=1.0){
+  		gl_FragColor = texture2D(colorMap, res);
+  	}else{
+  		gl_FragColor = vec4(0.0,0.0,0.0,1.0);
+  	}
+  }
+</code></pre></div>
+</p>
+
+<h3>3. Suivi des mouvements de l'observateur</h3>
+
+Pour contrôler l'orientation de notre caméra en utilisant l'accéléromètre et le gyroscope du
+smartphone, nous avons utilisé THREE.DeviceOrientationControls et la fonction connect().
 
 <div style>
   <figure>
-  	<img src="flou1.png" width="70%" alt="flou1" />
-    <img src="flou2.png" width="70%" alt="flou2" />
+  	<img src="gifstéréo.gif" alt="Vision stéréo">
   </figure>
-  <figcaption>Légende</figcaption>
+  <figcaption>Vision stéréoscopique avec utilisation de l'accéléromètre et du gyroscope</figcaption>
 </div>
-</br>
 
-<div class="highlight">
-<pre><code class="cpp">
 
-</code></pre></div>
-</p>
 
 </br>
 </div>
