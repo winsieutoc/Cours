@@ -42,12 +42,13 @@
 <h2>TD4 - Visiocasque "en carton"</h2>
 
 <h3>1. Rendu Stéréo pour le visiocasque</h3>
+
+Pour ce TP nous avons travaillé avec un smartphone Samsung S8, dont la résolution est : 2220x1080.</br>
 En nous basant sur les slides de Gordon Wetzstein, nous avons implémenté les fonctions distanceScreenViewer
-et lensMagnification ainsi que les matrices de projection.
-Nous avons travaillé avec un smartphone Samsung S8, 2220x1080.
-
-
-Nous avons ensuite utilisé la méthode setViewport pour que les rendus soient uniformes.
+et lensMagnification ainsi que les matrices de projection, celle-ci étant très similaire à celle déjà réalisé dans le TP2.
+Nous n'avons eu qu'à récuperer celle coder dans le TP2 et effectuer les modifications nécessaire.
+Nous avons ensuite utilisé la méthode setViewport pour afin de séparer les deux scenes de chacune des cameras, cela afin que nous ayons à gauche la scene vue par
+l'oeil gauche et la scene de froite respectivement à l'oeil droit.
 
 <div class="highlight">
 <pre><code class="cpp">// Left eye
@@ -72,7 +73,11 @@ Nous avons ensuite utilisé la méthode setViewport pour que les rendus soient u
 
 <h3>2. Correction des distorsions</h3>
 
-Dans cette partie nous avons eu à mettre en place 
+Dans cette partie nous devions modifier le shader afin de pouvoir y intégrer la distorsions.
+Les formules fournis nous permettaient d'obtenir <b>xu</b> et <b>yu</b>, or nous nous avions besoin de calculer <b>xd</b> et <b>yd</b>.
+Les modifications à apporter aux calculs afin de trouver les variables souhaité a était trivial.</br>
+La dernière étape était d'appliquer le bon <b>gl_FragColor</b> en fonction des valeurs de <b>xd</b> et <b>yd</b>.
+Si <b>xd</b> et <b>yd</b> étaient soit inferieur à 0 ou bien superieur à 1 il nous faut appliquer une couleur noir, sinon nous prenons les couleurs de la texture2D.
 
 <div class="highlight">
 <pre><code class="cpp">void main() {
@@ -93,7 +98,35 @@ Dans cette partie nous avons eu à mettre en place
 <h3>3. Suivi des mouvements de l'observateur</h3>
 
 Pour contrôler l'orientation de notre caméra en utilisant l'accéléromètre et le gyroscope du
-smartphone, nous avons utilisé THREE.DeviceOrientationControls et la fonction connect().
+smartphone, nous avons utilisé <b>THREE.DeviceOrientationControls</b> et la fonction <b>connect()</b> qui est implémenter dans le fichier '<b>DeviceOrientationControls.js</b>'.
+</br>
+Il nous a simplement fallu de commenter ces quelques ligne dans la fonction <b>init()</b> dans '<b>render.js</b>':
+<div class="highlight">
+<pre><code class="cpp"> Camera controler
+ controls = new THREE.PointerLockControls( camera, renderer.domElement );
+ scene.add( controls.getObject() );
+ controls.enabled = true;
+</code></pre></div>
+</p>
+Et remplacer avec :
+
+<div class="highlight">
+<pre><code class="cpp">function init() {
+...
+controls = new THREE.DeviceOrientationControls( camera, renderer.domElement );
+controls.connect();
+...
+}
+
+function animate() {
+  requestAnimationFrame( animate );
+  controls.update();
+  render();
+}
+</code></pre></div>
+</p>
+
+Cela nous permet d'obtenir le resultats suivant :
 
 <div style>
   <figure>
@@ -101,9 +134,9 @@ smartphone, nous avons utilisé THREE.DeviceOrientationControls et la fonction c
   </figure>
   <figcaption>Vision stéréoscopique avec utilisation de l'accéléromètre et du gyroscope</figcaption>
 </div>
-
-
-
+</br>
+N'ayant pas implementer la derniere partie dans le TP3, nous n'avons pas pu l'integrer dans ce TP.
+</br>
 </br>
 </div>
 
