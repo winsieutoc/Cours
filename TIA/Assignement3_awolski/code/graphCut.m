@@ -23,14 +23,14 @@ sizeLR = size(leftP);
 H = sizeLR(1);
 W = sizeLR(2);
 N = H * W;
-segclass = zeros(N,1);
+class = zeros(N,1);
 
 nbPatch = 2;
 
 unary = zeros(nbPatch, N);
-pairwise = sparse(N,N); % poids de voisin
+pairwise = sparse(N,N); % poid des voisins
 labelcost = [0,1 ; 1,0];
-maskTMP = zeros(H,W); % matrice pour fusion les images
+maskTMP = zeros(H,W); % matrice pour fusionner les images
 
 for row = 0:H-1
   for col = 0:W-1
@@ -41,11 +41,11 @@ for row = 0:H-1
     if col+1 < W, pairwise(pixel, 1+(col+1)+row*W) = smoothness(leftP,[row+1 col+1],rightP,[row+1 col+2]); end
     if col-1 >= 0, pairwise(pixel, 1+(col-1)+row*W) = smoothness(leftP,[row+1 col+1],rightP,[row+1 col]); end 
   end
-  unary(:,row*W+1) = [0 1000]'; %cout du pixel
+  unary(:,row*W+1) = [0 1000]'; %coût du pixel
   unary(:,(row+1)*W) = [1000 0]'; 
 end
 
-[labels E Eafter] = GCMex(segclass, single(unary), pairwise, single(labelcost),0);
+[labels E Eafter] = GCMex(class, single(unary), pairwise, single(labelcost),0);
 
 fprintf('E: %d (should be 260), Eafter: %d (should be 44)\n', E, Eafter);
 fprintf('unique(labels) should be [0 4] and is: [');
@@ -54,9 +54,11 @@ fprintf(']\n');
 
 labelsId = labels .* (1:N)';
 
-maskA = ismember(maskTMP,labelsId); %part A dans l'overlap
-maskB = ones(H,W) - maskA; %part B dans l'overlap
+maskA = ismember(maskTMP,labelsId); %partie de A dans l'overlap
+maskB = ones(H,W) - maskA; %partie de B dans l'overlap
 
+%afin de pouvoir appliquer les masque il est nécéssaire de le faire
+%séparement pour chaque canaux de couleur
 r = (maskA .* rightP(:,:,1)) + (maskB .* leftP(:,:,1));
 g = (maskA .* rightP(:,:,2)) + (maskB .* leftP(:,:,2));
 b = (maskA .* rightP(:,:,3)) + (maskB .* leftP(:,:,3));

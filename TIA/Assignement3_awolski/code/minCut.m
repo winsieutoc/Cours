@@ -95,6 +95,8 @@ for y = heightS:-1:1
             moyB = B(y,xB,:)./2;
             moyenne = moyA+moyB;
             finalImg(y,x,:) = moyenne;
+            %affichage frontière en blanc
+            %finalImg(y,x,:) = 255;
         end
     end
     I = C(y,I);
