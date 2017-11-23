@@ -81,11 +81,14 @@ end
 for y = heightS:-1:1
     tmpShow(y,I)=1;
     for x = 1:sizeIF(2)
+        %place les pixels de A (gauche)
         if(x<widthS-overlap+I)
             finalImg(y,x,:) = A(y,x,:);
+        %place les pixels de B (droite)
         elseif(x>widthS-overlap+I)
             xB = x-(widthS-overlap);
             finalImg(y,x,:) = B(y,xB,:);
+        %place la moyenne entre le pixel de A et pixel de B à la frontière
         elseif(x==widthS-overlap+I)
             xB = x-(widthS-overlap);
             moyA = A(y,x,:)./2;
